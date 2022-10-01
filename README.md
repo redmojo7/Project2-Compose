@@ -1,10 +1,10 @@
 # Project2-Compose
 Project2-Compose
 ## Docker-In-Docker container
-Docker-in-Docker container will be listening on port 2376 
-and since we gave it the network alias of docker then 
+Docker-in-Docker(dind) container will be listening on port 2376 
 ## Jenkin container
-we will be able to reach Docker-in-Docker container from Jenkins on tcp://docker:2376.('docker' is the the network alias of  network 'jenkins')
+A Jenkin container which uses the dind container to run a Jenkin pipeline. 
+We will be able to reach Docker-in-Docker container from Jenkins on tcp://docker:2376.m('docker' is the the alias of network 'jenkins')
 ## How to start/stop?
 ```
 docker-compose up -d
